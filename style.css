@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+
+:root {
+  --primary-gray: hsl(0, 0%, 63%);
+  --primary-black: hsl(0, 0%, 0%);
+  --primary-white: hsl(0, 0%, 100%);
+  --secondary-gray: hsl(0, 0%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+}
+
+main {
+  position: relative;
+}
+
+header {
+  position: absolute;
+  z-index: 2;
+  top: 3.5rem;
+  left: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 8rem;
+}
+
+nav img {
+  object-fit: contain;
+}
+
+ul {
+  display: none;
+}
+
+ul.expanded {
+  display: flex;
+}
+
+span::after {
+  content: url(./images/icon-hamburger.svg);
+}
+
+span.expanded {
+  content: url(./images/icon-close.svg);
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+p {
+  color: var(--primary-gray);
+  line-height: 1.25rem;
+}
+
+.controls {
+  position: absolute;
+  background-color: black;
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 3rem;
+  right: 0;
+  top: 19.25rem;
+}
+
+.controls img {
+  height: 1.25rem;
+  object-fit: contain;
+}
+
+section div {
+  padding: 2.25rem 1.5rem;
+}
+
+.slide-1 h1,
+.slide-2 h1,
+.slide-3 h1 {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.slide-1 p,
+.slide-2 p,
+.slide-3 p {
+  color: var(--primary-gray);
+  line-height: 1.2rem;
+}
+
+.slide-1 a,
+.slide-2 a,
+.slide-3 a {
+  color: var(--primary-black);
+  text-transform: uppercase;
+  margin: 2rem 0;
+  display: inline-block;
+  letter-spacing: 0.75rem;
+  font-weight: 600;
+}
+
+.slide-1 a::after,
+.slide-2 a::after,
+.slide-3 a::after {
+  content: url(./images/icon-arrow.svg);
+  margin-left: 1rem;
+}
+
+.slide-2,
+.slide-3 {
+  display: none;
+}
